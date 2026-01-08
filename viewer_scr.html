@@ -1,0 +1,268 @@
+<!-- viewer_scr.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📘 Scratch 教材瀏覽器 | 已整合至多媒體教材中心</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: linear-gradient(135deg, #4a6fa5, #6b8cbc);
+      color: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .header .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .notice-box {
+      background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+      border-left: 6px solid #ffc107;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .feature-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      background: white;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .btn-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .btn-primary {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #4a6fa5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(74, 111, 165, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background: #3a5a8c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(74, 111, 165, 0.4);
+    }
+    
+    .btn-secondary {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #6c757d;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #545b62;
+    }
+    
+    .countdown {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 20px;
+    }
+    
+    .countdown-number {
+      font-weight: bold;
+      color: #dc3545;
+      font-size: 1.3rem;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .content {
+        padding: 20px;
+      }
+      
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .btn-secondary {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📘 Scratch 教材瀏覽器</h1>
+    <p class="subtitle">此頁面已整合至全新的「多媒體教材中心」</p>
+  </div>
+  
+  <div class="content">
+    <div class="notice-box">
+      <h2 style="color: #856404; margin-top: 0;">🎉 重要通知：功能已升級！</h2>
+      <p>為提供更好的使用體驗，我們已將 Scratch 教材瀏覽器整合至全新的「多媒體教材中心」。</p>
+      <p>新功能包含：拖放上傳、批量處理、統一介面、更多檔案格式支援！</p>
+    </div>
+    
+    <h2>🚀 新功能特色</h2>
+    <p>在全新的多媒體教材中心，您將獲得以下升級體驗：</p>
+    
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>PDF閱讀器</h3>
+        <p>完整保留原有的PDF閱讀功能，並支援拖放上傳</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🎥</div>
+        <h3>影片播放器</h3>
+        <p>新增影片播放功能，支援本地檔案與線上影片</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📤</div>
+        <h3>批量上傳</h3>
+        <p>一次上傳多個檔案，支援PDF、影片、圖片格式</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Scratch整合</h3>
+        <p>保留Scratch教材分類與學習路徑</p>
+      </div>
+    </div>
+    
+    <div class="btn-container">
+      <a href="viewer_multi.html?tab=pdf" class="btn-primary">
+        🚀 立即前往多媒體教材中心
+      </a>
+      <a href="viewer_multi.html?tab=scratch" class="btn-secondary">
+        🎨 查看Scratch教材整合
+      </a>
+    </div>
+    
+    <div class="countdown">
+      <p>⏰ 本頁面將於 <span class="countdown-number" id="countdown">10</span> 秒後自動跳轉...</p>
+      <p><small>如果沒有自動跳轉，請點擊上方按鈕</small></p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>&copy; 2025 CHDAY169 教材平台 | 本頁面為過渡頁面，將於2025年12月31日停止服務</p>
+    <p>📧 聯絡信箱：chday169@gmail.com | 📺 YouTube：<a href="https://www.youtube.com/@chday7919" target="_blank">@chday7919</a></p>
+  </div>
+
+  <script>
+    // 倒數計時並自動跳轉
+    let countdown = 10;
+    const countdownElement = document.getElementById('countdown');
+    const countdownInterval = setInterval(() => {
+      countdown--;
+      countdownElement.textContent = countdown;
+      
+      if (countdown <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = 'viewer_multi.html?tab=pdf';
+      }
+    }, 1000);
+    
+    // 提供返回首頁的連結
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        window.location.href = 'index.html';
+      }
+    });
+    
+    // 如果使用者想留在這個頁面，可以取消跳轉
+    document.addEventListener('click', function() {
+      clearInterval(countdownInterval);
+      countdownElement.textContent = '已取消自動跳轉';
+      document.querySelector('.countdown p').innerHTML = 
+        '⏸️ 已取消自動跳轉，請點擊上方按鈕前往新頁面';
+    });
+  </script>
+</body>
+</html>
